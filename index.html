@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quattro piccoli aggiornamenti, lasciati qui per un’amica."
+    />
+    <meta name="theme-color" content="#f4f4f2" />
+    <title>Alcune cose che volevo raccontarti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas class="wave-field" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Torna all’inizio">
+        <span class="wordmark__dot"></span>
+        Tra noi
+      </a>
+      <span class="issue">Quattro piccole cose</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow reveal">
+          <span>Per te</span>
+          <span class="eyebrow__line"></span>
+          <span>Da me</span>
+        </div>
+
+        <div class="hero__copy">
+          <p class="kicker reveal">Ehi, è passato un po’.</p>
+          <h1 id="hero-title" class="reveal">Alcune cose<br />che volevo raccontarti.</h1>
+          <p class="intro reveal">
+            Niente di troppo formale.<br />Solo un piccolo aggiornamento, in quattro parti.
+          </p>
+        </div>
+
+        <a class="continue reveal" href="#how-are-you">
+          <span>Inizia da qui</span>
+          <span class="continue__arrow" aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="chapter chapter--light" id="how-are-you" aria-labelledby="question-title">
+        <div class="chapter__meta">
+          <span>01</span>
+          <span>Prima tu</span>
+        </div>
+        <div class="chapter__content">
+          <p class="section-label">Prima di tutto</p>
+          <h2 id="question-title">Come stai?</h2>
+          <p class="chapter__body">
+            Davvero — come stai? Cosa c’è di nuovo? Voglio sapere tutto quello
+            che è successo dall’ultima volta.
+          </p>
+        </div>
+        <a class="next-link" href="#nautical-licence" aria-label="Vai al secondo aggiornamento">02 ↓</a>
+      </section>
+
+      <section class="chapter chapter--dark chapter--with-visual" id="nautical-licence" aria-labelledby="nautical-title">
+        <div class="chapter__meta">
+          <span>02</span>
+          <span>Una conquista</span>
+        </div>
+        <div class="chapter__content">
+          <p class="section-label">Un piccolo aggiornamento</p>
+          <h2 id="nautical-title">Ho preso la<br />patente nautica.</h2>
+          <p class="chapter__body">
+            Alla fine ce l’ho fatta. Era una delle cose che volevo raccontarti.
+          </p>
+        </div>
+        <figure class="chapter__visual chapter__visual--nautical scroll-reveal">
+          <div class="visual-card">
+            <img
+              src="assets/patente-nautica.jpg"
+              alt="Copertina blu della patente nautica italiana"
+              width="770"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            <span>Obiettivo raggiunto</span>
+            <span aria-hidden="true">✓</span>
+          </figcaption>
+        </figure>
+        <a class="next-link" href="#driving-exam" aria-label="Vai al terzo aggiornamento">03 ↓</a>
+      </section>
+
+      <section class="chapter chapter--grey chapter--with-visual chapter--reverse" id="driving-exam" aria-labelledby="driving-title">
+        <div class="chapter__meta">
+          <span>03</span>
+          <span>Prossimamente</span>
+        </div>
+        <div class="chapter__content">
+          <p class="section-label">Segnati la data</p>
+          <h2 id="driving-title"><span class="date-line">16 settembre.</span><br />L’esame pratico.</h2>
+          <p class="chapter__body">
+            Quel giorno ho l’esame pratico per la patente.
+            Incrocia le dita per me.
+          </p>
+        </div>
+        <figure class="chapter__visual chapter__visual--driving scroll-reveal">
+          <div class="visual-card">
+            <img
+              src="assets/patente-guida.jpg"
+              alt="Modello rosa della patente di guida italiana"
+              width="1200"
+              height="782"
+              loading="lazy"
+            />
+            <span class="visual-card__date" aria-hidden="true">16.09</span>
+          </div>
+          <figcaption>
+            <span>Prossimo obiettivo</span>
+            <span>Esame pratico</span>
+          </figcaption>
+        </figure>
+        <a class="next-link" href="#secret" aria-label="Vai all’ultimo aggiornamento">04 ↓</a>
+      </section>
+
+      <section class="secret" id="secret" aria-labelledby="secret-title">
+        <div class="chapter__meta chapter__meta--dark">
+          <span>04</span>
+          <span>Un’ultima cosa</span>
+        </div>
+
+        <div class="secret__heading">
+          <p class="section-label">Questo è un segreto</p>
+          <h2 id="secret-title">C’è ancora una cosa.</h2>
+        </div>
+
+        <div class="secret-card" id="secret-card">
+          <div class="secret-message" id="secret-message" aria-hidden="true" aria-live="polite">
+            <p class="secret-message__label">Il segreto</p>
+            <h3>Ho traslocato.</h3>
+            <p>E per questo,<br />ho cambiato scuola.</p>
+          </div>
+
+          <button
+            class="glass"
+            id="glass"
+            type="button"
+            aria-controls="secret-message"
+            aria-expanded="false"
+            aria-label="Rompi il vetro nero per svelare il segreto"
+          >
+            <span class="glass__shard glass__shard--1" aria-hidden="true"></span>
+            <span class="glass__shard glass__shard--2" aria-hidden="true"></span>
+            <span class="glass__shard glass__shard--3" aria-hidden="true"></span>
+            <span class="glass__shard glass__shard--4" aria-hidden="true"></span>
+            <span class="glass__shard glass__shard--5" aria-hidden="true"></span>
+            <span class="glass__shard glass__shard--6" aria-hidden="true"></span>
+            <span class="glass__shine" aria-hidden="true"></span>
+            <span class="glass__prompt">
+              <span class="glass__label">Riservato</span>
+              <span class="glass__icon" aria-hidden="true">×</span>
+              <span class="glass__action">Tocca per rompere il vetro</span>
+            </span>
+          </button>
+        </div>
+
+        <p class="secret__after" id="secret-after">L’hai scoperto.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Per ora è tutto</span>
+      <span class="footer__rule"></span>
+      <a href="#top">Torna su ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
